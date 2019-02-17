@@ -1,21 +1,14 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="c-1">
+  component 1
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'HelloWorld',
-    props: {
-      msg: String
-    }
-  }
+export default {
+  name: 'Component'  
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  a {
-    color: #42b983;
-  }
-</style>
+<style ></style>

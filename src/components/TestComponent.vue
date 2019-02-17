@@ -1,11 +1,14 @@
-<template>   
-<div>
-    <h2>Hi, im a component</h2>
-</div>
+<template>
+  <div class="c-2">
+  component 2
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'TestComponent'
+  name: 'TestComponent'
 }
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style ></style>
