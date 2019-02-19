@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    This is App.vue component
-    <TestComponent1/>
+    <Header/>
+    This is Main component
   </div>
 </template>
 
 <script>
-import TestComponent1 from './components/TestComponent1'
+import Header from './components/Header'
 
 export default {
   components: {
-    TestComponent1
+    Header
   }
 }
 </script>
