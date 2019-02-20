@@ -4,7 +4,6 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import App from './App.vue'
-import Test from './components/Test'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
@@ -14,16 +13,9 @@ Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
-const Router = new VueRouter({
-  mode: 'history',
-  base: __dirname,
-  routes: [
-    { path: '/', component: App },
-    { path: '/test', component: Test }
-  ]
-})
-
 /* eslint-disable no-new */
 new Vue({
-  render: h => h(App)
-}).$mount('#app')
+  el: '#app',
+  template: '<App/>',
+  components: { App }
+})
