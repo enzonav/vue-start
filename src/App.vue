@@ -1,16 +1,14 @@
 <template>
   <div id="app">
     <Header/>
-    This is Main component
+    This is Root component
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
-
 export default {
   components: {
-    Header
+
   }
 }
 </script>
