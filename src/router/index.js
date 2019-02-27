@@ -1,15 +1,7 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import App from '../App.vue'
 import Test from '../components/Test.vue'
+import Test1 from '../components/Test1.vue'
 
-Vue.use(Router)
-
-export default new Router({
-  mode: 'history',
-  base: __dirname,
-  routes: [
-    { path: '/', component: App },
-    { path: '/test', component: Test }
-  ]
-})
+export const routes = [
+  { path: '/test', component: Test },
+  { path: '/test1', component: Test1 }
+]
