@@ -1,25 +1,17 @@
 <template>
-  <div>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">About</a></li>
-  </div>
+  <header>
+    <div class="logo">
+      <router-link to="/" class="Logo">Client</router-link>
+    </div>
+    <div class="main-navigation">
+      <router-link to="/login">Login</router-link>
+      <router-link to="/register">Register</router-link>
+    </div>
+  </header>
 </template>
 
 <script>
-export default {
-  name: 'Header'
-}
+   export default {
+      name: 'Header'
+   }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style >
-ul {
-  list-style-type: none;
-}
-
-li {
-  display: inline;
-}
-</style>
