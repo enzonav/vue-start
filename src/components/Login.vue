@@ -1,5 +1,7 @@
 <template>
-  <div>This is Test Component</div>
+  <div>
+    <h2>Login Page</h2>
+  </div>
 </template>
 
 <script>

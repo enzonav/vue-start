@@ -5,6 +5,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 import { routes } from './router/index.js'
+import store from './store/index.js'
+import firebase from 'firebase'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
@@ -23,6 +25,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
