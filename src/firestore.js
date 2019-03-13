@@ -1,16 +1,15 @@
 import firebase from 'firebase'
-import 'firebase/firestore'
 
 const config = {
-  apiKey: 'xxxxxxxxxxxxxx',
-  authDomain: 'xxxxxxxxxxxxxx',
-  databaseURL: 'xxxxxxxxxxxxxx',
-  projectId: 'xxxxxxxxxxxxxxt',
-  storageBucket: 'xxxxxxxxxxxxxx',
-  messagingSenderId: 'xxxxxxxxxxxxxx'
+  apiKey: 'AIzaSyDD3bqrKvHjlBeLt3_xqfK1IkWWgF7CHcU',
+  authDomain: 'vue-auth2368.firebaseapp.com',
+  databaseURL: 'https://vue-auth2368.firebaseio.com',
+  projectId: 'vue-auth2368',
+  storageBucket: 'vue-auth2368.appspot.com',
+  messagingSenderId: '29527813748'
 }
 
-const firestore = firebase.initializeApp(config)
-const db = firebase.firestore()
+const myFirebase = firebase.initializeApp(config)
+const db = myFirebase.firestore()
 
 export default db
