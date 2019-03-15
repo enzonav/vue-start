@@ -10,6 +10,9 @@
 </template>
 
 <script>
+import firebase from 'firebase'
+import db from '../firestore'
+
 export default {
   name: 'Login',
   data () {
@@ -22,7 +25,13 @@ export default {
   },
   methods: {
     login () {
-      console.log('Loggin in')
+      firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+        .then(user => {
+          console.log(user)
+        })
+        .catch(err => {
+          this.errorMessage = err.message
+        })
     }
   }
 }
