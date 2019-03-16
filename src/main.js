@@ -6,6 +6,7 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import { routes } from './router/index.js'
 import store from './store/index.js'
+import firebase from 'firebase'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
@@ -16,15 +17,29 @@ const router = new VueRouter({
   mode: 'history'
 })
 
+router.beforeEach((to, from, next) => {
+  const currentUser = firebase.auth().currentUser
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
+  if (requiresAuth && !currentUser) next('login')
+  else if (!requiresAuth && currentUser) next('dashboard')
+  else next()
+})
+
 /* eslint-disable no-new */
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  store,
-  template: '<App/>',
-  components: { App }
+
+let app = ''
+firebase.auth().onAuthStateChanged(user => {
+  if (!app) {
+    new Vue({
+      el: '#app',
+      router,
+      store,
+      template: '<App/>',
+      components: { App }
+    })
+  }
 })
