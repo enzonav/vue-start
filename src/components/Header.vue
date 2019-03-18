@@ -4,26 +4,15 @@
       <router-link to="/" class="Logo">Client</router-link>
     </div>
     <div class="main-navigation">
-      <router-link to="/login">Login</router-link>
-      <router-link to="/register">Register</router-link>
-      <a @click.prevent.stop="logout">Logout</a>
+      <router-link to="/about">About</router-link>
+      <router-link to="/contacts">Contacts</router-link>
     </div>
   </header>
 </template>
 
 <script>
 
-import firebase from 'firebase'
-
 export default {
-  name: 'Header',
-  methods: {
-    logout () {
-      firebase.auth().signOut()
-        .then(() => {
-          this.$router.replace('login')
-        })
-    }
-  }
+  name: 'Header'
 }
 </script>
