@@ -20,15 +20,9 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+
 export default {
-  name: 'ExampleVuex',
-  mounted () {
-    this.$store.dispatch('loadCoins')
-  },
-  computed: mapState([
-    'coins'
-  ])
+  name: 'ExampleVuex'
 }
 
 </script>
