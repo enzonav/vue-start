@@ -1,14 +1,12 @@
-import Vue form 'vue'
+import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'axios'
-import VueAxios from 'vue-axios'
 
-import authStore from './modules/authStore'
+import exampleStore from './modules/exampleStore'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
-    authStore
+    exampleStore
   }
 })

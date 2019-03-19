@@ -1,11 +1,10 @@
 <template>
   <header>
-    <div class="logo">
-      <router-link to="/" class="Logo">Client</router-link>
-    </div>
     <div class="main-navigation">
+      <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/contacts">Contacts</router-link>
+      <router-link to="/example">Example Vuex-Axios</router-link>
     </div>
   </header>
 </template>
