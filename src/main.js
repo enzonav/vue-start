@@ -6,7 +6,6 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import { routes } from './router/index.js'
 import store from './store/index.js'
-import { mapState } from 'vuex'
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
@@ -27,12 +26,6 @@ new Vue({
   el: '#app',
   router,
   store,
-  mounted () {
-    this.$store.dispatch('loadCoins')
-  },
-  computed: mapState([
-    'coins'
-  ]),
   template: '<App/>',
   components: { App }
 })

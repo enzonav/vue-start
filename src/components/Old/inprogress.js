@@ -1,3 +1,11 @@
+mounted () {
+  this.$store.dispatch('loadCoins')
+},
+computed: mapState([
+  'coins'
+]),
+
+
 import db from "../../firestore";
 
 
